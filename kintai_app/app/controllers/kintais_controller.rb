@@ -5,6 +5,10 @@ class KintaisController < ApplicationController
   # GET /kintais.json
   def index
     @kintais = Kintai.all
+    respond_to do |format|
+      format.html
+      format.csv{send_data @kintais.to_csv }
+    end
   end
 
   # GET /kintais/1
