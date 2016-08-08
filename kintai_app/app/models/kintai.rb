@@ -3,9 +3,9 @@ class Kintai < ActiveRecord::Base
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|
       
-      csv << column_names
+      csv << ["ID", "Date", "Start Time", "Finish Time", "Research Time"]
       all.each do |kintai|
-        csv << kintai.attributes.values_at(*column_names)
+        csv << kintai.[id, date, start_time, finish_time, (start_time - finish_time)/60]
       end
     end
   end
