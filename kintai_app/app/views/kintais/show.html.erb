@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @kintai.date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @kintai.start_time %>
+</p>
+
+<p>
+  <strong>Finish time:</strong>
+  <%= @kintai.finish_time %>
+</p>
+
+<p>
+  <strong>Resarch time:</strong>
+  <%= @kintai.resarch_time %>
+</p>
+
+<p>
+  <strong>Purpose:</strong>
+  <%= @kintai.purpose %>
+</p>
+
+<p>
+  <strong>Reflection:</strong>
+  <%= @kintai.reflection %>
+</p>
+
+<%= link_to 'Edit', edit_kintai_path(@kintai) %> |
+<%= link_to 'Back', kintais_path %>

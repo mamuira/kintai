@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-08-08
+  start_time: 2016-08-08 06:59:39
+  finish_time: 2016-08-08 06:59:39
+  resarch_time: 2016-08-08 06:59:39
+  purpose: MyText
+  reflection: MyText
+
+two:
+  date: 2016-08-08
+  start_time: 2016-08-08 06:59:39
+  finish_time: 2016-08-08 06:59:39
+  resarch_time: 2016-08-08 06:59:39
+  purpose: MyText
+  reflection: MyText

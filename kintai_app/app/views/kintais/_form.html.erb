@@ -1,0 +1,41 @@
+<%= form_for(@kintai) do |f| %>
+  <% if @kintai.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kintai.errors.count, "error") %> prohibited this kintai from being saved:</h2>
+
+      <ul>
+      <% @kintai.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.time_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :finish_time %><br>
+    <%= f.time_select :finish_time %>
+  </div>
+  <div class="field">
+    <%= f.label :resarch_time %><br>
+    <%= f.time_select :resarch_time %>
+  </div>
+  <div class="field">
+    <%= f.label :purpose %><br>
+    <%= f.text_area :purpose %>
+  </div>
+  <div class="field">
+    <%= f.label :reflection %><br>
+    <%= f.text_area :reflection %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
