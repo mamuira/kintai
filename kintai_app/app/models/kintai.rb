@@ -10,6 +10,6 @@ class Kintai < ActiveRecord::Base
     end
   end
     def csv_value
-      [id, date, start_time, finish_time, (start_time - finish_time)]
+      [id, date, start_time, finish_time, (finish_time - start_time)*60]
     end
 end
