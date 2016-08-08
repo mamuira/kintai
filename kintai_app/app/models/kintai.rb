@@ -5,9 +5,11 @@ class Kintai < ActiveRecord::Base
       
       csv << ["ID", "Date", "Start Time", "Finish Time", "Research Time"]
       all.each do |kintai|
-        csv << kintai.[id, date, start_time, finish_time, (start_time - finish_time)/60]
+        csv << kintai.csv_value
       end
     end
   end
-    
+    def csv_value
+      [id, date, start_time, finish_time, (start_time - finish_time)]
+    end
 end
